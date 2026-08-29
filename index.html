@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Kuraku Sri Balaji | Hulk Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* ========================================
+           BASIC SETTINGS
+        ======================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            font-family: "Orbitron", sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(57,255,20,0.15),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 80% 70%,
+                    rgba(57,255,20,0.10),
+                    transparent 30%
+                ),
+
+                #020502;
+
+            color: white;
+
+            overflow-x: hidden;
+        }
+
+
+        /* ========================================
+           BACKGROUND
+        ======================================== */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(57,255,20,0.03) 1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(57,255,20,0.03) 1px,
+                    transparent 1px
+                );
+
+            background-size: 50px 50px;
+
+            pointer-events: none;
+
+            z-index: -2;
+        }
+
+
+        /* ========================================
+           NAVBAR
+        ======================================== */
+
+        nav {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding: 20px 8%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: rgba(0,5,0,0.85);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom:
+                1px solid rgba(57,255,20,0.25);
+
+            z-index: 1000;
+        }
+
+
+        .logo {
+
+            font-family: "Bebas Neue";
+
+            font-size: 32px;
+
+            letter-spacing: 3px;
+
+            color: #39ff14;
+
+            text-shadow:
+                0 0 10px #39ff14,
+                0 0 25px #39ff14;
+        }
+
+
+        .logo span {
+
+            color: white;
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 30px;
+        }
+
+
+        .nav-links a {
+
+            color: #aaa;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+
+            color: #39ff14;
+
+            text-shadow:
+                0 0 10px #39ff14;
+        }
+
+
+        /* ========================================
+           HERO
+        ======================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            padding:
+                150px 8%
+                80px;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            align-items: center;
+
+            gap: 50px;
+
+            position: relative;
+        }
+
+
+        .hero-content {
+
+            z-index: 2;
+        }
+
+
+        .gamma {
+
+            color: #39ff14;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 25px;
+
+            text-shadow:
+                0 0 10px #39ff14;
+        }
+
+
+        .hero h1 {
+
+            font-family: "Bebas Neue";
+
+            font-size:
+                clamp(70px, 10vw, 150px);
+
+            line-height: 0.8;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero h1 .green {
+
+            color: #39ff14;
+
+            text-shadow:
+
+                0 0 10px #39ff14,
+
+                0 0 30px #39ff14,
+
+                0 0 70px rgba(57,255,20,0.6);
+        }
+
+
+        .hero h2 {
+
+            font-size: 24px;
+
+            color: #b8ff9d;
+
+            margin-bottom: 25px;
+
+            letter-spacing: 1px;
+        }
+
+
+        .hero p {
+
+            max-width: 650px;
+
+            color: #8b9c86;
+
+            line-height: 1.9;
+
+            font-size: 15px;
+        }
+
+
+        /* ========================================
+           HERO BUTTONS
+        ======================================== */
+
+        .buttons {
+
+            display: flex;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+            margin-top: 35px;
+        }
+
+
+        .btn {
+
+            padding:
+                15px 25px;
+
+            border-radius: 5px;
+
+            text-decoration: none;
+
+            font-weight: 800;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+
+            transition: 0.3s;
+        }
+
+
+        .green-btn {
+
+            background: #39ff14;
+
+            color: #001000;
+
+            box-shadow:
+                0 0 15px rgba(57,255,20,0.4);
+        }
+
+
+        .green-btn:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+
+                0 0 15px #39ff14,
+
+                0 0 40px #39ff14;
+        }
+
+
+        .dark-btn {
+
+            border:
+                1px solid #315c2d;
+
+            color: white;
+
+            background: #071007;
+        }
+
+
+        .dark-btn:hover {
+
+            border-color: #39ff14;
+
+            color: #39ff14;
+
+            box-shadow:
+                0 0 20px rgba(57,255,20,0.2);
+        }
+
+
+        /* ========================================
+           HULK LOGO
+        ======================================== */
+
+        .hulk-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            position: relative;
+
+            height: 500px;
+        }
+
+
+        .hulk-circle {
+
+            width: 390px;
+
+            height: 390px;
+
+            border-radius: 50%;
+
+            border:
+                2px solid #39ff14;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+
+                radial-gradient(
+                    circle,
+                    #173d13,
+                    #050b05 70%
+                );
+
+            box-shadow:
+
+                0 0 30px
+                rgba(57,255,20,0.3),
+
+                0 0 80px
+                rgba(57,255,20,0.15),
+
+                inset 0 0 60px
+                rgba(57,255,20,0.2);
+
+            animation:
+                pulse 3s infinite;
+        }
+
+
+        .hulk-letter {
+
+            font-family:
+                "Bebas Neue";
+
+            font-size: 300px;
+
+            line-height: 1;
+
+            color: #39ff14;
+
+            text-shadow:
+
+                5px 5px 0 #071407,
+
+                0 0 20px #39ff14,
+
+                0 0 50px #39ff14;
+        }
+
+
+        .gamma-ring {
+
+            position: absolute;
+
+            width: 440px;
+
+            height: 440px;
+
+            border:
+
+                1px dashed
+                #39ff14;
+
+            border-radius: 50%;
+
+            animation:
+                rotate 15s linear infinite;
+        }
+
+
+        @keyframes pulse {
+
+            0%,100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.04);
+            }
+        }
+
+
+        @keyframes rotate {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        /* ========================================
+           SECTIONS
+        ======================================== */
+
+        section {
+
+            padding:
+                110px 8%;
+        }
+
+
+        .section-label {
+
+            color: #39ff14;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .section-title {
+
+            font-family:
+                "Bebas Neue";
+
+            font-size: 65px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .section-title span {
+
+            color: #39ff14;
+
+            text-shadow:
+                0 0 20px rgba(57,255,20,0.4);
+        }
+
+
+        .section-description {
+
+            color: #71806d;
+
+            max-width: 700px;
+
+            line-height: 1.8;
+
+            font-size: 14px;
+        }
+
+
+        /* ========================================
+           ABOUT
+        ======================================== */
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 50px;
+
+            margin-top: 50px;
+        }
+
+
+        .about-text p {
+
+            color: #8c9988;
+
+            line-height: 2;
+
+            margin-bottom: 20px;
+
+            font-size: 14px;
+        }
+
+
+        .stats {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap: 15px;
+        }
+
+
+        .stat {
+
+            padding: 30px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #0c180c,
+                    #040904
+                );
+
+            border:
+                1px solid #1c381a;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+
+        .stat:hover {
+
+            border-color: #39ff14;
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+                0 10px 30px
+                rgba(57,255,20,0.1);
+        }
+
+
+        .stat h3 {
+
+            color: #39ff14;
+
+            font-size: 30px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .stat p {
+
+            color: #71806d;
+
+            font-size: 11px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* ========================================
+           SKILLS
+        ======================================== */
+
+        .skills {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin-top: 40px;
+        }
+
+
+        .skill {
+
+            padding:
+                15px 25px;
+
+            background: #071007;
+
+            border:
+                1px solid #203d1d;
+
+            color: #b7c5b2;
+
+            border-radius: 5px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+
+        .skill:hover {
+
+            color: #39ff14;
+
+            border-color: #39ff14;
+
+            transform:
+                scale(1.05);
+
+            box-shadow:
+                0 0 20px
+                rgba(57,255,20,0.2);
+        }
+
+
+        /* ========================================
+           INTEREST CARDS
+        ======================================== */
+
+        .cards {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 20px;
+
+            margin-top: 50px;
+        }
+
+
+        .card {
+
+            padding: 35px;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    #0b170b,
+                    #030703
+                );
+
+            border:
+                1px solid #193519;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 100%;
+
+            height: 3px;
+
+            top: 0;
+            left: 0;
+
+            background: #39ff14;
+
+            box-shadow:
+                0 0 20px #39ff14;
+        }
+
+
+        .card:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color:
+                #39ff14;
+
+            box-shadow:
+                0 20px 50px
+                rgba(0,0,0,0.5);
+        }
+
+
+        .number {
+
+            color: #39ff14;
+
+            font-size: 12px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .card h3 {
+
+            font-size: 20px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .card p {
+
+            color: #71806d;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        /* ========================================
+           PROJECT
+        ======================================== */
+
+        .project-box {
+
+            margin-top: 50px;
+
+            max-width: 800px;
+
+            padding: 40px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #0c180c,
+                    #030703
+                );
+
+            border:
+                1px solid #203d1d;
+
+            border-radius: 10px;
+        }
+
+
+        .project-box h3 {
+
+            color: #39ff14;
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .project-box p {
+
+            color: #7b8977;
+
+            line-height: 1.8;
+
+            font-size: 14px;
+        }
+
+
+        .coming {
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+            color: #39ff14;
+
+            border:
+                1px solid #39ff14;
+
+            padding: 8px 15px;
+
+            border-radius: 20px;
+
+            font-size: 10px;
+        }
+
+
+        /* ========================================
+           RESUME
+        ======================================== */
+
+        .resume-section {
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #050b05,
+                    #091509,
+                    #050b05
+                );
+        }
+
+
+        .resume-box {
+
+            margin-top: 40px;
+
+            padding: 40px;
+
+            border:
+                1px solid #234521;
+
+            border-radius: 10px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 30px;
+        }
+
+
+        .resume-box h3 {
+
+            font-size: 28px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .resume-box p {
+
+            color: #71806d;
+
+            font-size: 13px;
+        }
+
+
+        /* ========================================
+           CONTACT
+        ======================================== */
+
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 20px;
+
+            margin-top: 50px;
+        }
+
+
+        .contact-card {
+
+            padding: 30px;
+
+            background: #071007;
+
+            border:
+                1px solid #193519;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+
+        .contact-card:hover {
+
+            border-color: #39ff14;
+
+            transform:
+                translateY(-5px);
+        }
+
+
+        .contact-card small {
+
+            color: #39ff14;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+        }
+
+
+        .contact-card a {
+
+            display: block;
+
+            margin-top: 15px;
+
+            color: #aaa;
+
+            font-size: 13px;
+
+            word-break: break-word;
+        }
+
+
+        .contact-card a:hover {
+
+            color: #39ff14;
+        }
+
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+
+        footer {
+
+            padding:
+                35px 8%;
+
+            text-align: center;
+
+            border-top:
+                1px solid #152615;
+
+            color: #4e5b4b;
+
+            font-size: 11px;
+        }
+
+
+        footer span {
+
+            color: #39ff14;
+        }
+
+
+        /* ========================================
+           MOBILE
+        ======================================== */
+
+        @media(max-width:850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+
+                grid-template-columns: 1fr;
+
+                padding:
+                    130px 6%
+                    70px;
+            }
+
+            .hulk-container {
+
+                height: 350px;
+            }
+
+            .hulk-circle {
+
+                width: 280px;
+                height: 280px;
+            }
+
+            .hulk-letter {
+
+                font-size: 210px;
+            }
+
+            .gamma-ring {
+
+                width: 320px;
+                height: 320px;
+            }
+
+            section {
+
+                padding:
+                    80px 6%;
+            }
+
+            .about-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            .cards {
+
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            .resume-box {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+            .section-title {
+
+                font-size: 50px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================
+     NAVIGATION
+========================================= -->
+
+<nav>
+
+    <div class="logo">
+
+        KURAKU
+        <span>SRl BALAJI</span>
+
+    </div>
+
+
+    <div class="nav-links">
+
+        <a href="#home">HOME</a>
+
+        <a href="#about">ABOUT</a>
+
+        <a href="#skills">SKILLS</a>
+
+        <a href="#projects">PROJECTS</a>
+
+        <a href="#resume">RESUME</a>
+
+        <a href="#contact">CONTACT</a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ========================================
+     HERO
+========================================= -->
+
+<section class="hero" id="home">
+
+
+    <div class="hero-content">
+
+        <div class="gamma">
+
+            ⚡ GAMMA POWERED DEVELOPER
+
+        </div>
+
+
+        <h1>
+
+            KURAKU
+
+            <br>
+
+            <span class="green">
+
+                SRI BALAJI
+
+            </span>
+
+        </h1>
+
+
+        <h2>
+
+            COMPUTER SCIENCE STUDENT
+
+        </h2>
+
+
+        <p>
+
+            I am a Computer Science student with an interest in
+            Software Development, Artificial Intelligence,
+            Data Science, and practical technology applications.
+
+        </p>
+
+
+        <div class="buttons">
+
+
+            <a
+                href="#contact"
+                class="btn green-btn">
+
+                CONTACT ME
+
+            </a>
+
+
+            <a
+                href="Kuraku_Sri_Balaji_Resume.pdf"
+                target="_blank"
+                class="btn dark-btn">
+
+                VIEW RESUME
+
+            </a>
+
+
+            <a
+                href="https://github.com/balajikuraku23-debug"
+                target="_blank"
+                class="btn dark-btn">
+
+                GITHUB ↗
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- HULK LOGO -->
+
+    <div class="hulk-container">
+
+        <div class="gamma-ring"></div>
+
+        <div class="hulk-circle">
+
+            <div class="hulk-letter">
+
+                H
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ========================================
+     ABOUT
+========================================= -->
+
+<section id="about">
+
+
+    <div class="section-label">
+
+        WHO AM I?
+
+    </div>
+
+
+    <div class="section-title">
+
+        ABOUT
+        <span>ME</span>
+
+    </div>
+
+
+    <p class="section-description">
+
+        A quick look at my academic background,
+        technical interests and career direction.
+
+    </p>
+
+
+    <div class="about-grid">
+
+
+        <div class="about-text">
+
+            <p>
+
+                I am Kuraku Sri Balaji, a B.Tech Computer Science
+                student interested in building practical solutions
+                using technology.
+
+            </p>
+
+
+            <p>
+
+                I am developing my programming fundamentals while
+                exploring Artificial Intelligence, Data Science
+                and Software Development.
+
+            </p>
+
+
+            <p>
+
+                I believe in continuous learning, improving my
+                technical skills and building useful solutions
+                to real-world problems.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="stats">
+
+
+            <div class="stat">
+
+                <h3>6.3</h3>
+
+                <p>
+
+                    CURRENT CGPA
+
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <h3>B.TECH</h3>
+
+                <p>
+
+                    COMPUTER SCIENCE
+
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <h3>3+</h3>
+
+                <p>
+
+                    CORE TECHNOLOGIES
+
+                </p>
+
+            </div>
+
+
+            <div class="stat">
+
+                <h3>AI</h3>
+
+                <p>
+
+                    AREA OF INTEREST
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     SKILLS
+========================================= -->
+
+<section id="skills">
+
+
+    <div class="section-label">
+
+        MY POWER SET
+
+    </div>
+
+
+    <div class="section-title">
+
+        TECH
+        <span>SKILLS</span>
+
+    </div>
+
+
+    <p class="section-description">
+
+        Technologies and tools I am currently learning
+        and working with.
+
+    </p>
+
+
+    <div class="skills">
+
+
+        <div class="skill">
+
+            C
+
+        </div>
+
+
+        <div class="skill">
+
+            PYTHON
+
+        </div>
+
+
+        <div class="skill">
+
+            HTML
+
+        </div>
+
+
+        <div class="skill">
+
+            GIT
+
+        </div>
+
+
+        <div class="skill">
+
+            GITHUB
+
+        </div>
+
+
+        <div class="skill">
+
+            ARTIFICIAL INTELLIGENCE
+
+        </div>
+
+
+        <div class="skill">
+
+            DATA SCIENCE
+
+        </div>
+
+
+        <div class="skill">
+
+            SOFTWARE DEVELOPMENT
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     INTERESTS
+========================================= -->
+
+<section>
+
+
+    <div class="section-label">
+
+        MY MISSION
+
+    </div>
+
+
+    <div class="section-title">
+
+        AREAS OF
+        <span>INTEREST</span>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="number">
+
+                01 // GAMMA
+
+            </div>
+
+
+            <h3>
+
+                Artificial Intelligence
+
+            </h3>
+
+
+            <p>
+
+                Exploring intelligent systems and
+                understanding how AI can be applied
+                to practical problems.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="number">
+
+                02 // DATA
+
+            </div>
+
+
+            <h3>
+
+                Data Science
+
+            </h3>
+
+
+            <p>
+
+                Interested in data-driven thinking,
+                analysis and technologies used to
+                understand information.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="number">
+
+                03 // CODE
+
+            </div>
+
+
+            <h3>
+
+                Software Development
+
+            </h3>
+
+
+            <p>
+
+                Learning how to design and build
+                useful software applications.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     PROJECTS
+========================================= -->
+
+<section id="projects">
+
+
+    <div class="section-label">
+
+        MY BATTLEFIELD
+
+    </div>
+
+
+    <div class="section-title">
+
+        MY
+        <span>PROJECTS</span>
+
+    </div>
+
+
+    <p class="section-description">
+
+        Projects will be added here as I build
+        and complete new applications.
+
+    </p>
+
+
+    <div class="project-box">
+
+
+        <h3>
+
+            PROJECTS COMING SOON
+
+        </h3>
+
+
+        <p>
+
+            I am currently developing my project portfolio.
+            Future projects will showcase the problem,
+            solution, technologies used, GitHub repository
+            and live demo.
+
+        </p>
+
+
+        <span class="coming">
+
+            IN DEVELOPMENT
+
+        </span>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     RESUME
+========================================= -->
+
+<section
+    id="resume"
+    class="resume-section">
+
+
+    <div class="section-label">
+
+        MY PROFILE
+
+    </div>
+
+
+    <div class="section-title">
+
+        MY
+        <span>RESUME</span>
+
+    </div>
+
+
+    <div class="resume-box">
+
+
+        <div>
+
+            <h3>
+
+                Kuraku Sri Balaji
+
+            </h3>
+
+
+            <p>
+
+                B.Tech Computer Science Student
+
+            </p>
+
+        </div>
+
+
+        <a
+            href="Kuraku_Sri_Balaji_Resume.pdf"
+            target="_blank"
+            class="btn green-btn">
+
+            OPEN RESUME
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     CONTACT
+========================================= -->
+
+<section id="contact">
+
+
+    <div class="section-label">
+
+        JOIN THE TEAM
+
+    </div>
+
+
+    <div class="section-title">
+
+        LET'S
+        <span>CONNECT</span>
+
+    </div>
+
+
+    <p class="section-description">
+
+        Want to connect? Find me through
+        my professional profiles below.
+
+    </p>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact-card">
+
+            <small>
+
+                EMAIL
+
+            </small>
+
+
+            <a
+                href="mailto:balajikuraku23@gmail.com">
+
+                balajikuraku23@gmail.com
+
+            </a>
+
+        </div>
+
+
+
+        <div class="contact-card">
+
+            <small>
+
+                GITHUB
+
+            </small>
+
+
+            <a
+                href="https://github.com/balajikuraku23-debug"
+                target="_blank">
+
+                github.com/balajikuraku23-debug
+
+            </a>
+
+        </div>
+
+
+
+        <div class="contact-card">
+
+            <small>
+
+                LINKEDIN
+
+            </small>
+
+
+            <a
+                href="https://www.linkedin.com/in/kuraku-sri-balaji/"
+                target="_blank">
+
+                linkedin.com/in/kuraku-sri-balaji
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    © 2026 Kuraku Sri Balaji |
+
+    Built with
+
+    <span>
+
+        Gamma Energy ⚡
+
+    </span>
+
+</footer>
+
+
+</body>
+
+</html>
